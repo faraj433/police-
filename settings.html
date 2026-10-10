@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; script-src 'unsafe-inline'">
+<style>body{margin:0;padding:22px;background:#1c1e29;color:#e8eaf2;font-family:Segoe UI,Tahoma,sans-serif;font-size:14px}
+h3{margin:0 0 12px}label{display:block;color:#8f94ab;font-size:12px;margin-top:10px}
+input[type=text],input[type=password],input[type=number]{width:100%;padding:9px;border-radius:6px;border:1px solid #33374a;background:#2b2e3f;color:#e8eaf2;direction:ltr}
+.box{background:#252836;border:1px solid #33374a;border-radius:8px;padding:12px;margin-top:10px}.r{display:flex;gap:8px;align-items:center;margin:6px 0}
+button{background:#7367f0;color:#fff;border:0;border-radius:6px;padding:10px 22px;cursor:pointer;font:inherit;margin-top:14px}#e{color:#ea5455;min-height:20px;margin-top:8px}.m{color:#8f94ab;font-size:12px}</style></head>
+<body><h3>🛡️ Ministry of Interior — الإعدادات</h3>
+<div class="r"><input type="radio" name="m" id="mh" value="host" onchange="v()"><label for="mh" style="margin:0;color:#e8eaf2">أنا المضيف (التطبيق يشغّل الخادم ويحفظ البيانات على جهازي)</label></div>
+<div class="r"><input type="radio" name="m" id="mc" value="client" onchange="v()"><label for="mc" style="margin:0;color:#e8eaf2">أنا عميل (أتصل بجهاز مضيف آخر)</label></div>
+<div class="box" id="h"><label>رمز المدير (الدخول بالشارة ADMIN)</label><input type="password" id="ac" placeholder="اتركه فارغاً للإبقاء على الحالي">
+<label>المنفذ</label><input type="number" id="pt" value="3000"><div class="r"><input type="checkbox" id="sh"><label for="sh" style="margin:0;color:#e8eaf2">السماح للأجهزة الأخرى بالاتصال بي</label></div><div class="m" id="ip"></div></div>
+<div class="box" id="c"><label>رابط الجهاز المضيف (مثال: http://192.168.1.5:3000)</label><input type="text" id="ur" placeholder="http://"></div>
+<div id="e"></div><button onclick="s()">حفظ وتشغيل</button>
+<script>const $=i=>document.getElementById(i);
+function v(){const h=$('mh').checked;$('h').style.display=h?'':'none';$('c').style.display=h?'none':''}
+api.get().then(c=>{$('mh').checked=c.mode==='host';$('mc').checked=c.mode==='client';$('ur').value=c.url;$('pt').value=c.port;$('sh').checked=c.share;
+$('ip').textContent=c.ips.length?'عناوين جهازك للمشاركة: '+c.ips.map(i=>'http://'+i+':'+c.port).join(' ، '):'';v()});
+async function s(){const r=await api.save({mode:$('mh').checked?'host':'client',adminCode:$('ac').value,port:$('pt').value,share:$('sh').checked,url:$('ur').value.trim()});if(r)$('e').textContent=r}</script></body></html>

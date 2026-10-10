@@ -1,0 +1,41 @@
+{
+  "name": "moi-desktop",
+  "version": "1.0.0",
+  "description": "Ministry of Interior Desktop",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win",
+    "release": "electron-builder --win --publish always"
+  },
+  "dependencies": {
+    "electron-updater": "^6.3.0"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.0"
+  },
+  "build": {
+    "appId": "com.moi.portal",
+    "productName": "Ministry of Interior",
+    "files": [
+      "main.js",
+      "preload.js",
+      "settings.html",
+      "offline.html",
+      "server.js",
+      "public/**"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false
+    },
+    "publish": {
+      "provider": "github"
+    },
+    "artifactName": "MinistryOfInterior-Setup-${version}.${ext}"
+  }
+}

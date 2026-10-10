@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ministry of Interior</title>
+<style>
+:root{--bg:#1c1e29;--side:#191b25;--card:#252836;--card2:#2b2e3f;--bd:#33374a;--tx:#e8eaf2;--mut:#8f94ab;--pri:#7367f0;--grn:#28c76f;--org:#ff9f43;--red:#ea5455;--cyn:#00cfe8;
+color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Segoe UI",Tahoma,Arial,sans-serif;font-size:14px}
+.app{display:flex;min-height:100vh}
+aside{width:230px;background:var(--side);border-inline-start:1px solid var(--bd);padding:14px 10px;flex-shrink:0}
+.logo{display:flex;align-items:center;gap:8px;justify-content:center;padding:6px 0 14px;font-weight:700}
+.logo i{width:34px;height:34px;border-radius:50%;border:2px solid var(--tx);display:grid;place-items:center;font-style:normal}
+aside h6{margin:14px 8px 4px;font-size:12px;color:var(--mut);font-weight:600}
+aside a{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;color:var(--mut);cursor:pointer}
+aside a:hover{color:var(--tx)}aside a.on{background:linear-gradient(270deg,var(--pri),#9e95f5);color:#fff;box-shadow:0 2px 8px rgba(115,103,240,.4)}
+.col{flex:1;min-width:0}
+.top{background:var(--side);border-bottom:1px solid var(--bd);padding:10px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.top .n{color:var(--mut);font-size:13px}.top .n b{color:var(--pri)}
+.me{display:flex;align-items:center;gap:8px}.av{width:34px;height:34px;border-radius:50%;background:var(--pri);display:grid;place-items:center;color:#fff;font-weight:700}
+.me small{display:block;color:var(--mut);font-size:11px;line-height:1.2}
+main{padding:18px 20px;max-width:1200px}
+.pt{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.pt h2{margin:0;font-size:18px}.pt span{color:var(--mut);font-size:12px}
+.row{display:grid;gap:14px;margin-bottom:14px}.r4{grid-template-columns:2fr 1fr 1fr 1fr}.r3{grid-template-columns:repeat(3,1fr)}
+.c{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:16px}
+.c h3{margin:0 0 12px;font-size:15px}
+.ban{background:linear-gradient(135deg,#6c63e8,#8a7df5 60%,#5fa8f5);border:0;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:10px;overflow:hidden}
+.ban h3{font-size:18px;margin:0 0 6px}.ban p{margin:0;font-size:13px;opacity:.9;line-height:1.7}.ban em{font-style:normal;font-size:70px;filter:drop-shadow(0 6px 10px rgba(0,0,0,.25))}
+.st{display:flex;align-items:center;justify-content:space-between;gap:8px}.st b{font-size:22px;display:block}.st span{color:var(--mut);font-size:13px}
+.ring{position:relative;width:62px;height:62px;flex-shrink:0}.ring svg{transform:rotate(-90deg)}.ring i{position:absolute;inset:0;display:grid;place-items:center;font-style:normal;font-size:20px}
+.li{display:flex;align-items:center;gap:10px;padding:9px 6px;border-radius:6px}.li:nth-child(odd){background:var(--card2)}
+.li .ic{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--card2);font-size:18px;flex-shrink:0}
+.li .t{flex:1;min-width:0}.li .t small{display:block;color:var(--mut);font-size:12px}.li .p{color:var(--mut);font-size:12px;white-space:nowrap}
+.pc{font-size:12px;color:var(--mut);width:48px}
+table{width:100%;border-collapse:collapse}th,td{text-align:right;padding:9px 8px;border-bottom:1px solid var(--bd);vertical-align:top}th{color:var(--mut);font-size:12px;background:var(--card2)}
+.tw{overflow-x:auto}
+label{font-size:12px;color:var(--mut);display:block}
+input,select,textarea{width:100%;padding:8px 10px;border:1px solid var(--bd);border-radius:6px;background:var(--card2);color:var(--tx);font:inherit}
+textarea{min-height:60px}.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:10px}
+button{background:var(--pri);color:#fff;border:0;border-radius:6px;padding:8px 16px;font:inherit;cursor:pointer}
+button.o{background:transparent;border:1px solid var(--pri);color:var(--pri)}button.d{background:none;color:var(--red);padding:3px 8px}
+.bd{padding:2px 9px;border-radius:99px;font-size:12px;background:rgba(115,103,240,.16);color:var(--pri)}
+.pill-r{background:rgba(234,84,85,.16);color:var(--red)}.pill-o{background:rgba(255,159,67,.16);color:var(--org)}.pill-g{background:rgba(40,199,111,.16);color:var(--grn)}
+.lgw{min-height:100vh;display:grid;place-items:center;padding:16px}.lgc{width:100%;max-width:380px}
+.err{color:var(--red);font-size:13px;min-height:20px}.mut{color:var(--mut);font-size:13px}
+.code{font:700 22px monospace;letter-spacing:3px;background:var(--card2);border:2px dashed var(--org);padding:10px;text-align:center;border-radius:8px;direction:ltr;margin:8px 0}
+@media(max-width:900px){.r4,.r3{grid-template-columns:1fr 1fr}.ban{grid-column:1/-1}}
+@media(max-width:700px){.app{flex-direction:column}aside{width:100%;border:0;border-bottom:1px solid var(--bd);display:flex;gap:4px;overflow-x:auto;padding:8px}aside h6,.logo{display:none}aside a{white-space:nowrap}.r4,.r3{grid-template-columns:1fr}}
+.mod{position:fixed;inset:0;background:rgba(0,0,0,.6);display:grid;place-items:center;z-index:50}.mod .c{max-width:340px;text-align:center}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--red);color:#fff;padding:10px 18px;border-radius:8px;z-index:60}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+const ST=["جديد","قيد التحقيق","محال للنيابة","مغلق"];
+const SEC=["LSPD","Sheriff","SWAT"];
+const ICO=["👮","⭐","🪖"],COL=["#7367f0","#ff9f43","#ea5455"];
+const RK=["Cadet","Officer I","Officer II","Officer III","Senior Lead Officer","Sergeant I","Sergeant II","Lieutenant","Captain","Commander","Deputy Chief","Assistant Chief","Chief of Police"];
+const PERMS=[["addCase","تسجيل القضايا",1],["setCase","تغيير حالة القضايا",2],["delCase","حذف القضايا",5],["viewPeople","عرض الأفراد",5],["addPerson","إضافة الأفراد",7],["setPerson","إيقاف/تفعيل الأفراد وتجديد الرمز",7],["delPerson","حذف الأفراد",8]];
+let RAW=[],PEND=[],db=null,user=null,ACC=[],CASES=[],PC={},S=null,tab="h",fails=0,lockUntil=0,newCode=null,ready=false;
+const $=s=>document.querySelector(s);
+const E=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const opts=(a,s)=>a.map(x=>`<option${x===s?" selected":""}>${x}</option>`).join("");
+async function H(s){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("")}
+function rnd(n,al){const a=new Uint32Array(n);crypto.getRandomValues(a);return[...a].map(x=>al[x%al.length]).join("")}
+const ring=(p,c,ic)=>{const r=26,L=2*Math.PI*r;return`<div class="ring"><svg width="62" height="62"><circle cx="31" cy="31" r="${r}" fill="none" stroke="#33374a" stroke-width="4"/><circle cx="31" cy="31" r="${r}" fill="none" stroke="${c}" stroke-width="4" stroke-linecap="round" stroke-dasharray="${L*p/100} ${L}"/></svg><i>${ic}</i></div>`};
+const ri=r=>RK.indexOf(r);
+const minOf=k=>Number.isInteger(PC[k])?PC[k]:PERMS.find(p=>p[0]===k)[2];
+const can=k=>!!S&&(S.admin||ri(S.rank)>=minOf(k));
+const canManage=a=>S.admin||(a.id!==S.id&&!a.admin&&ri(a.rank)<ri(S.rank));
+function toast(m){const t=document.createElement("div");t.className="toast";t.textContent=m;document.body.appendChild(t);setTimeout(()=>t.remove(),3500)}
+function ask(msg,fn){const d=document.createElement("div");d.className="mod";d.innerHTML=`<div class="c"><p>${E(msg)}</p><button id="y">تأكيد</button> <button class="o" id="n">إلغاء</button></div>`;document.body.appendChild(d);d.querySelector("#n").onclick=()=>d.remove();d.querySelector("#y").onclick=()=>{d.remove();fn()}}
+const W=p=>Promise.resolve(p).catch(e=>toast("تعذر الحفظ: "+(e&&(e.message||e.code)||"")));
+
+async function api(a,b,q){const r=await fetch("/api/"+a,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(b||{})});const j=await r.json().catch(()=>({}));if(!r.ok){if(!q)toast(j.error||"خطأ");throw j}return j}
+async function load(){try{const j=await api("state",{},1);S=j.me;ACC=j.accounts;PEND=j.pending;CASES=j.cases;PC=j.perms}catch(e){S=null}ready=true;draw()}
+setInterval(()=>{if(S&&!document.querySelector(".mod"))load()},8000);load();
+
+function draw(){
+ if(!S){ if(!$("#lg"))loginView(); const h=$("#hint");
+  return}
+ shell();
+}
+function loginView(){
+ $("#root").innerHTML=`<div class="lgw"><div class="c lgc" id="lg"><div class="logo" style="padding-top:0"><i>🛡️</i> Ministry of Interior</div><h3 style="text-align:center">تسجيل الدخول</h3>
+ <label>رقم الشارة</label><input id="lb" autocomplete="off" dir="ltr"><br><br><label>رمز الدخول</label><input id="lc" type="password" autocomplete="off" dir="ltr" onkeydown="if(event.key==='Enter')login()">
+ <div class="err" id="le"></div><button onclick="login()" style="width:100%">دخول</button><div id="ad"></div><p class="mut" id="hint"></p></div></div>`;
+ $("#ad").innerHTML=`<br><button class="o" style="width:100%" onclick="regView()">إنشاء حساب</button>`;
+}
+async function login(){const le=$("#le");try{await api("login",{badge:$("#lb").value,code:$("#lc").value},1)}catch(e){le.textContent=e.error||"فشل الدخول";return}await load()}
+async function logout(){try{await api("logout",{},1)}catch(e){}S=null;newCode=null;draw()}
+function regView(){
+ $("#lg").innerHTML=`<div class="logo" style="padding-top:0"><i>🛡️</i> Ministry of Interior</div><h3 style="text-align:center">إنشاء حساب</h3>
+ <label>رقم الشارة</label><input id="rb" dir="ltr" autocomplete="off"><br><br><label>الاسم</label><input id="rn"><br><br><label>القطاع</label><select id="rs">${opts(SEC)}</select><br><br>
+ <label>رمز دخول تختاره (5 خانات فأكثر، أحرف وأرقام إنجليزية)</label><input id="rc" type="password" dir="ltr" autocomplete="off">
+ <div class="err" id="le"></div><button onclick="sendReg()" style="width:100%">إرسال الطلب</button><br><br><button class="o" style="width:100%" onclick="loginView()">رجوع</button>`;
+}
+async function sendReg(){
+ const le=$("#le");
+ try{await api("register",{badge:$("#rb").value,name:$("#rn").value,sector:$("#rs").value,code:$("#rc").value},1);
+  $("#lg").innerHTML=`<h3 style="text-align:center">تم إرسال طلبك ✅</h3><p class="mut" style="text-align:center">حسابك بانتظار موافقة المدير. بعد القبول سجّل الدخول برقم شارتك والرمز اللي اخترته.</p><button style="width:100%" onclick="loginView()">رجوع لتسجيل الدخول</button>`}
+ catch(e){le.textContent=e.error||"تعذر إرسال الطلب"}
+}
+const TT={h:"الرئيسية",s:"القطاعات",c:"القضايا",p:"الأفراد",k:"الصلاحيات",r:"طلبات الحسابات"};
+function shell(){
+ if(!$("#sh")){
+  $("#root").innerHTML=`<div class="app" id="sh"><aside><div class="logo"><i>🛡️</i> Ministry of Interior</div><h6>عام</h6><div id="nv"></div>
+  <h6>الحساب</h6><a onclick="logout()">🚪 تسجيل خروج</a></aside>
+  <div class="col"><div class="top"><div class="n">🔥 <b>نظام</b> إدارة القطاعات والبلاغات الأمنية</div><div class="me"><div><b id="mn"></b><small id="mr"></small></div><div class="av" id="mv"></div></div></div><main id="mm"></main></div></div>`;
+ }
+ $("#mn").textContent=S.name;$("#mr").textContent=S.rank+(S.admin?" · مدير":"");$("#mv").textContent=S.name[0];
+ const nav=[["h","🏠"],["s","🏢"],["c","📁"]];if(can("viewPeople"))nav.push(["p","👥"]);if(S.admin){nav.push(["r","📝"]);nav.push(["k","🔑"])}
+ if(!nav.find(n=>n[0]===tab))tab="h";
+ $("#nv").innerHTML=nav.map(n=>`<a class="${tab===n[0]?"on":""}" onclick="tab='${n[0]}';draw()">${n[1]} ${TT[n[0]]}${n[0]==="r"&&PEND.length?` (${PEND.length})`:""}</a>`).join("");
+ const keep={};document.querySelectorAll("#mm [id]").forEach(e=>keep[e.id]=e.value);
+ $("#mm").innerHTML=`<div class="pt"><h2>${TT[tab]}</h2><span>الرئيسية / ${TT[tab]}</span></div>`+page();
+ Object.entries(keep).forEach(([k,v])=>{const e=document.getElementById(k);if(e)e.value=v});
+}
+function page(){
+ const tot=CASES.length,closed=CASES.filter(c=>c.status==="مغلق").length,urg=CASES.filter(c=>c.pri==="عاجلة"&&c.status!=="مغلق").length;
+ const act=ACC.filter(a=>a.active!==false).length;
+ if(tab==="h")return`<div class="row r4"><div class="c ban"><div><h3>مرحبًا بك يا ${E(S.name)}!</h3><p>لوحة إدارة القطاعات والأفراد والقضايا الأمنية. تابع البلاغات وحدّث حالاتها من مكان واحد.</p></div><em>🛡️</em></div>
+ <div class="c st"><div><b>${ACC.length}</b><span>عدد الأفراد</span></div>${ring(ACC.length?act/ACC.length*100:0,"#28c76f","👥")}</div>
+ <div class="c st"><div><b>${tot}</b><span>عدد القضايا</span></div>${ring(tot?closed/tot*100:0,"#ff9f43","📁")}</div>
+ <div class="c st"><div><b>${urg}</b><span>قضايا عاجلة</span></div>${ring(tot?urg/tot*100:0,"#ea5455","🚨")}</div></div>
+ <div class="row r3"><div class="c"><h3>توزيع الأفراد بالقطاعات</h3>${SEC.map((s,i)=>{const n=ACC.filter(a=>a.sector===s).length;return`<div class="li"><div class="pc">%${ACC.length?(n/ACC.length*100).toFixed(1):0}</div><div class="t">${s}<small>${n} فرد</small></div><div class="ic" style="border:2px solid ${COL[i]}">${ICO[i]}</div></div>`}).join("")}</div>
+ <div class="c"><h3>حالات القضايا</h3><table><tr><th>الحالة</th><th>العدد</th></tr>${ST.map(s=>`<tr><td>${s}</td><td>${CASES.filter(c=>c.status===s).length}</td></tr>`).join("")}</table></div>
+ <div class="c"><h3>آخر القضايا</h3>${CASES.slice(0,5).map(c=>`<div class="li"><div class="p">${E(c.date)}</div><div class="t">${E(c.type)}<small>${E(c.officer)}</small></div><div class="ic">📄</div></div>`).join("")||'<p class="mut">لا توجد قضايا</p>'}</div></div>`;
+ if(tab==="s")return`<div class="row r3">`+SEC.map((s,i)=>`<div class="c st"><div><h3 style="margin:0 0 6px">${s}</h3><span>${ACC.filter(a=>a.sector===s).length} فرد · ${CASES.filter(c=>c.sector===s).length} قضية</span></div><div class="li" style="padding:0"><div class="ic" style="border:2px solid ${COL[i]};width:52px;height:52px;font-size:24px">${ICO[i]}</div></div></div>`).join("")+`</div>`;
+ if(tab==="c")return(can("addCase")?`<div class="c" style="margin-bottom:14px"><h3>تسجيل قضية</h3><div class="g"><input id="ty" placeholder="نوع القضية"><input id="lo" placeholder="الموقع"><input id="pa" placeholder="المشتبه / مقدم البلاغ"><select id="se">${opts(SEC)}</select><select id="pr">${opts(["عادية","متوسطة","عاجلة"])}</select></div><textarea id="ds" placeholder="التفاصيل"></textarea><br><br><button onclick="addC()">تسجيل</button></div>`:`<p class="mut">رتبتك لا تسمح بتسجيل القضايا</p>`)+
+ `<div class="c tw"><table><tr><th>الرقم</th><th>التاريخ</th><th>القضية</th><th>القطاع</th><th>الأولوية</th><th>المسؤول</th><th>الحالة</th><th></th></tr>`+CASES.map(c=>`<tr title="${E(c.desc)}"><td>${E(c.id.slice(-6))}</td><td>${E(c.date)}</td><td>${E(c.type)} — ${E(c.loc)}</td><td>${E(c.sector)}</td><td><span class="bd ${c.pri==="عاجلة"?"pill-r":c.pri==="متوسطة"?"pill-o":"pill-g"}">${E(c.pri)}</span></td><td>${E(c.officer)}</td><td>${can("setCase")?`<select onchange="setC('${E(c.id)}',this.value)">${opts(ST,c.status)}</select>`:E(c.status)}</td><td>${can("delCase")?`<button class="d" onclick="delC('${E(c.id)}')">حذف</button>`:""}</td></tr>`).join("")+`</table>${CASES.length?"":'<p class="mut">لا توجد قضايا</p>'}</div>`;
+ if(tab==="p"&&can("viewPeople")){
+  const rk=S.admin?RK:RK.slice(0,ri(S.rank));
+  return(can("addPerson")?`<div class="c" style="margin-bottom:14px"><h3>إضافة فرد</h3>${newCode?`<div><b>رمز الدخول لـ ${E(newCode.n)} — يظهر مرة واحدة فقط، سلّمه للفرد:</b><div class="code">${newCode.c}</div><button class="o" onclick="newCode=null;draw()">تم</button></div>`:""}
+  <div class="g"><input id="pb" placeholder="رقم الشارة" dir="ltr"><input id="pn" placeholder="الاسم"><select id="ps">${opts(SEC)}</select><select id="pk">${opts(rk)}</select></div><button onclick="addP()">إضافة وتوليد رمز</button></div>`:"")+
+  `<div class="c tw"><table><tr><th>الشارة</th><th>الاسم</th><th>الرتبة</th><th>القطاع</th><th>الحالة</th><th></th></tr>`+ACC.map(a=>{const m=canManage(a);return`<tr><td>${E(a.id)}</td><td>${E(a.name)}</td><td>${E(a.rank)}${a.admin?" ★":""}</td><td>${E(a.sector)}</td><td><span class="bd ${a.active===false?"pill-r":"pill-g"}">${a.active===false?"موقوف":"فعّال"}</span></td><td>${m&&can("setPerson")?`<button class="d" style="color:var(--pri)" onclick="reset('${E(a.id)}')">رمز جديد</button><button class="d" onclick="tog('${E(a.id)}',${a.active===false})">${a.active===false?"تفعيل":"إيقاف"}</button>`:""}${m&&can("delPerson")?`<button class="d" onclick="delP('${E(a.id)}')">حذف</button>`:""}</td></tr>`}).join("")+`</table>${ACC.length?"":'<p class="mut">لا يوجد أفراد</p>'}</div>`}
+ if(tab==="k"&&S.admin)return`<div class="c tw"><h3>صلاحيات الرتب</h3><p class="mut">اختر أدنى رتبة تملك كل صلاحية (والرتب الأعلى منها تملكها تلقائياً). المدير يملك كل الصلاحيات.</p><table><tr><th>الصلاحية</th><th>أدنى رتبة</th></tr>${PERMS.map(p=>`<tr><td>${p[1]}</td><td><select onchange="setPerm('${p[0]}',+this.value)">${RK.map((r,i)=>`<option value="${i}"${i===minOf(p[0])?" selected":""}>${r}</option>`).join("")}</select></td></tr>`).join("")}</table></div>`;
+ if(tab==="r"&&S.admin)return`<div class="c tw"><h3>طلبات إنشاء الحسابات</h3><p class="mut">أنت الوحيد الذي يقبل أو يرفض الطلبات. حدد رتبة المتقدم عند القبول.</p><table><tr><th>الشارة</th><th>الاسم</th><th>القطاع</th><th>التاريخ</th><th>الرتبة</th><th></th></tr>${PEND.map(a=>`<tr><td>${E(a.id)}</td><td>${E(a.name)}</td><td>${E(a.sector)}</td><td>${E(a.date)}</td><td><select id="rk_${E(a.id)}">${opts(RK.slice(0,12),"Cadet")}</select></td><td><button onclick="approve('${E(a.id)}')">قبول</button><button class="d" onclick="rejectP('${E(a.id)}')">رفض</button></td></tr>`).join("")}</table>${PEND.length?"":'<p class="mut">لا توجد طلبات</p>'}</div>`;
+ return"";
+}
+const g=i=>$("#"+i).value.trim();
+const go=async(a,b,f)=>{try{const j=await api(a,b);if(f)f(j);await load()}catch(e){}};
+async function addC(){if(!g("ty")||!g("ds"))return;go("addCase",{type:g("ty"),loc:g("lo"),party:g("pa"),sector:g("se"),pri:g("pr"),desc:g("ds")},()=>["ty","lo","pa","ds"].forEach(i=>$("#"+i).value=""))}
+const setC=(id,status)=>go("setCase",{id,status});
+const delC=id=>ask("حذف القضية؟",()=>go("delCase",{id}));
+function addP(){const n=g("pn");if(!g("pb")||!n)return;go("addPerson",{badge:g("pb"),name:n,sector:g("ps"),rank:g("pk")},j=>newCode={n,c:j.code})}
+const reset=id=>go("resetCode",{id},j=>newCode={n:ACC.find(x=>x.id===id).name,c:j.code});
+const tog=(id,active)=>go("toggle",{id,active});
+const delP=id=>ask("حذف الفرد نهائياً؟",()=>go("delPerson",{id}));
+const setPerm=(k,v)=>go("setPerm",{k,v});
+const approve=id=>go("approve",{id,rank:document.getElementById("rk_"+id).value});
+const rejectP=id=>ask("رفض الطلب وحذفه؟",()=>go("reject",{id}));
+</script>
+</body>
+</html>
